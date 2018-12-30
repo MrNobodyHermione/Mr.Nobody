@@ -12,8 +12,9 @@ bool ispal(int n,int k){
         n/=k;
     }
     int i=0,j=p-1;
-    while(i<j)
+    while(i<j){
         if(res[i++]!=res[j--])return 0;
+    }
     return 1;
 }
 int main(){
