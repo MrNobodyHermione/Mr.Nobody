@@ -8,10 +8,12 @@ using namespace std;
 string name[5000];
 char ft[10][4]={{},{},"ABC","DEF","GHI","JKL","MNO","PRS","TUV","WXY"};
 int main(){
-    freopen("dict.txt","r",stdin);
     freopen("namenum.in","r",stdin);
     freopen("namenum.out","w",stdout);
     int n=0;
+    cin>>name[n];
+    n++;
+    freopen("dict.txt","r",stdin);
     while(cin>>name[n]) n++;
     string x=name[0];
     n--;
