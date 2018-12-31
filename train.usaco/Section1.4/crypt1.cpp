@@ -5,51 +5,42 @@ LANG: C++
 */
 #include<bits/stdc++.h>
 using namespace std;
+bool num[15];
 int n;
-int a[20];
-int b[20];
 int ans=0;
 bool jesus(int x){
     while(x){
-        int tmp=x%10;
-        x/=10;
-        int flg=false;
-        for(int i=1;i<=n;i++){
-            if(tmp==a[i]) flg=true;
+        if(num[x%10]==0){
+            return false;
         }
-        if(!flg) return false;
+        x/=10;
     }
     return true;
 }
-bool check(){
-    int chengshu1=b[1]*100+b[2]*10+b[3];
-    int ji1=chengshu1*b[4];
-    int ji2=chengshu1*b[5];
-    int ji=ji1*10+ji2;
-    if(ji1<100||ji1>999||ji2<100||ji2>999||ji<1000||ji>9999) return false;
-    if(!jesus(ji)||!jesus(ji1)||!jesus(ji2)) return false;
-    return true;
-}
-void cryptarithm(int dep){
-    if(dep>5){
-        if(check()) ans++;
-        return;
-    }
-    for(int i=1;i<+n;i++){
-        b[dep]=a[i];
-        cryptarithm(dep+1);
-    }
+bool check(int x,int y){
+    int a=x*(y%10);
+	int b=x*(y/10);
+	int ji=x*y;
+    if(a>999||b>999||ji>9999) return false;
+    if(jesus(x)==1&&jesus(y)==1&&jesus(a)==1&&jesus(b)==1&&jesus(ji)==1) return true;
+    return false;
 }
 int main(){
-    // freopen("crypt1.in","r",stdin);
-    // freopen("crypt1.out","w",stdout);
+	freopen("crypt1.in","r",stdin);
+	freopen("crypt1.out","w",stdout);
     cin>>n;
     for(int i=1;i<=n;i++){
-        cin>>a[i];
+        int x;
+        cin>>x;
+        num[x]=true;
     }
-
-    cryptarithm(1);
-
+    
+    for(int i=100;i<1000;i++){
+        for(int j=10;j<100;j++){
+            if(check(i,j)) ans++;
+        }
+    }
+    
     cout<<ans<<endl;
     return 0;
 }
