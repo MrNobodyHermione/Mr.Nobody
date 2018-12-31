@@ -6,7 +6,7 @@ LANG: C++
 #include<bits/stdc++.h>
 using namespace std;
 string name[5000];
-char ft[10][4]={{},{},"ABC","DEF","GHI","JKL","MNO","PRS","TUV","WXY"};
+char a[10][4]={{},{},"ABC","DEF","GHI","JKL","MNO","PRS","TUV","WXY"};
 int main(){
     freopen("namenum.in","r",stdin);
     freopen("namenum.out","w",stdout);
@@ -22,7 +22,7 @@ int main(){
         bool tmp=(name[i].size()==x.size());
         for(int j=0;j<name[i].size();j++){
             char c=name[i][j];
-            tmp=tmp&(c==ft[x[j]-'0'][0]||c==ft[x[j]-'0'][1]||c==ft[x[j]-'0'][2]);
+            tmp=tmp&(c==a[x[j]-'0'][0]||c==a[x[j]-'0'][1]||c==a[x[j]-'0'][2]);
         }
         if(tmp){
             cout<<name[i].c_str()<<endl;

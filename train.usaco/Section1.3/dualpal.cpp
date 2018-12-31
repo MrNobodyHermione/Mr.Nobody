@@ -6,7 +6,7 @@ LANG: C++
 #include<bits/stdc++.h>
 using namespace std;
 bool ispal(int n,int k){
-    short res[100]={0},p=0;
+    int res[100]={0},p=0;
     while(n){
         res[p++]=n%k;
         n/=k;
