@@ -5,7 +5,6 @@ LANG: C++
 */
 #include<bits/stdc++.h>
 using namespace std;
-using namespace std;
 int b;
 int a[1000];
 char g[12]={'A','B','C','D','E','F','G','H','I','J','K','L'};
