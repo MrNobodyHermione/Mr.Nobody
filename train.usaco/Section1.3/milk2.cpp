@@ -1,7 +1,14 @@
+/*
+ID: hjl11841
+TASK: milk2
+LANG: C++
+*/
 #include<bits/stdc++.h>
 using namespace std;
 int c[1000002]={0};
 int main(){
+    freopen("milk2.in","r",stdin);
+    freopen("milk2.out","w",stdout);
     int start=2e9,end=-2e9;
     int n;
     int a,b;
