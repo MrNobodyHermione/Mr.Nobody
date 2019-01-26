@@ -1,4 +1,3 @@
-
 #include<bits/stdc++.h>
 using namespace std;
 string ss1,ss2;
@@ -22,6 +21,6 @@ int main(){
         }
     }
 
-    cout<<f[len1][len2]<<endl;
+    cout<<f[slen1][slen2]<<endl;
     return 0;
 }
