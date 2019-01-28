@@ -1,3 +1,8 @@
+/*
+ID: hjl11841
+TASK: milk3
+LANG: C++
+*/
 #include<bits/stdc++.h>
 using namespace std;
 int x,y,z;
@@ -15,6 +20,8 @@ void dfs(int a,int b,int c){
     dfs(a,min(y,b+c),max(0,c-(y-b)));
 }
 int main(){
+    freopen("milk3.in","r",stdin);
+    freopen("milk3.out","w",stdout);
     cin>>x>>y>>z;
     
     memset(f,0,sizeof(f));
