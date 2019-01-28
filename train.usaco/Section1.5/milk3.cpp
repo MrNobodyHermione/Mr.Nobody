@@ -28,8 +28,9 @@ int main(){
 	dfs(0,0,z);
     sort(lover,lover+ans);
 	  
-    for(int i=0;i<ans;i++){
+    for(int i=0;i<ans-1;i++){
 		cout<<lover[i]<<' ';
 	}
+    cout<<lover[ans-1]<<endl;
     return 0;
 }
